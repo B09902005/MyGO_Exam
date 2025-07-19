@@ -27,18 +27,6 @@
   text-decoration: underline;
 }
 
-/* 手機螢幕調整 */
-@media (max-width: 600px) {
-  .header h1 {
-    font-size: 1.4em;
-  }
-
-  .header .intro, .header .info, .header .source {
-    font-size: 0.95em;
-  }
-}
-
-
 body {
   font-family: Arial, sans-serif;
   padding: 20px;
@@ -47,6 +35,7 @@ body {
   background-color: #55aadd;
   margin: auto;
 }
+
 #chatbox {
   background: #f7f7f7;
   padding: 12px;
@@ -54,6 +43,8 @@ body {
   border-radius: 6px;
 
   border: 1px solid #ccc;
+  width: 80%;
+  max-width: 80%;
   padding: 10px;
   overflow-y: auto;    /* 垂直方向可滾動 */
 
@@ -81,23 +72,6 @@ body {
 
 #options button:hover {
   background-color: #e6f0fa;
-}
-
-/* 響應式設計：針對小螢幕 */
-@media (max-width: 600px) {
-  body {
-    padding: 12px;
-    font-size: 0.95em;
-  }
-
-  #chatbox {
-    max-height: 400px;
-  }
-
-  #options button {
-    padding: 6px 12px;
-    font-size: 0.95em;
-  }
 }
 
 .form-group {
@@ -158,18 +132,28 @@ body {
 }
 
 /* 📱 手機裝置調整字體和間距 */
+
+
 @media (max-width: 600px) {
+  .header h1 {
+    font-size: 2em;
+  }
+
+  .header .intro, .header .info, .header .source {
+    font-size: 1.2em;
+  }
+
   .radio-group {
     flex-direction: column;
   }
 
-  .radio-group label {
-    flex: 1 1 auto;
-    width: 100%;
-  }
-
   #start-btn {
     width: 100%;
-    font-size: 1.1em;
+    font-size: 1.2em;
+  }
+
+  #options button {
+    font-size: 5em;
+    padding: 16px 24px; 
   }
 }
