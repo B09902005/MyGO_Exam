@@ -10,8 +10,6 @@ async function loadData(path) {
 
 // 模擬 Python 的 start_quiz 功能
 async function startQuiz() {
-    console.log("Viewport width: " + window.innerWidth + "px");
-    console.log("Viewport height: " + window.innerHeight + "px");
     const chat = document.getElementById('chatbox');
     chat.innerHTML = "";
     addLeftText("正在生成題目，請稍等幾秒...")
@@ -133,7 +131,7 @@ function addImage(canvas) {
 async function showQuestion() {
     const q = quizData[idx];
     chat = document.getElementById('chatbox');
-
+    chat.innerHTML += "<br>"
     addLeftText(`第${idx+1}題：請選出圖片中正確的台詞。`)
     addImage(q.canvas);
     
