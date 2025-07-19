@@ -1,6 +1,8 @@
 let quizData = [];
 let idx = 0;
 let score = 0;
+let range = 1;
+let difficulty = 1;
 
 async function loadData(path) {
     return fetch(path).then(r => r.json());
@@ -11,8 +13,8 @@ async function startQuiz() {
     const chat = document.getElementById('chatbox');
     chat.innerHTML = "";
     addLeftText("正在生成題目，請稍等幾秒...")
-    const difficulty = document.querySelector('input[name="difficulty"]:checked').value;
-    const range = document.querySelector('input[name="range"]:checked').value;
+    difficulty = document.querySelector('input[name="difficulty"]:checked').value;
+    range = document.querySelector('input[name="range"]:checked').value;
 
     const allData = await loadData("data.json");
     const chosenSeasons = range === "1" ? [1,2] : range === "2" ? [1] : [2];
@@ -60,6 +62,7 @@ function optionsCount(loopIndex) {
 }
 
 async function generateQuestion(data, quotes, i) {
+    data = shuffle(data)
     const choices = shuffle(quotes).slice(0, optionsCount(i));
     const answerText = choices[Math.floor(Math.random()*choices.length)];
     const choiceData = choices.map(text => data.find(d => d.text === text));
@@ -179,7 +182,8 @@ async function handleAnswer(choice) {
 function finalize() {
     const chat = document.getElementById('chatbox');
     document.getElementById('question-area').style.display = 'none';
-    chat.innerHTML += `<div>🎉 測驗結束！總分：${score}</div>`;
+    const mode = difficulty === "1" ? "簡單模式" : difficulty === "2" ? "困難模式" : "超難模式";
+    addLeftText(`🎉 測驗結束！恭喜你在 ${mode} 拿到 ${score} 分！！`);
 }
 
 function shuffle(arr) {
