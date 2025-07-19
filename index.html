@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>MyGO!!!!! / Ave Mujica 台詞測驗</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>MyGO!!!!! / Ave Mujica 台詞測驗！</h1>
+  <p>選擇題目難度和範圍後，點擊「開始挑戰！」即可開始。 題目會隨機給你 MyGO!!!!! 或 Ave Mujica 的動畫截圖，請選出該圖片對應的台詞。</p>
+  <p>題目共 30 題，滿分 100 分。 1-10題有三個選項，一題 3 分。11-20題有四個選項，一題 3 分。21-30題有六個選項，一題 4 分。</p>
+  <p>資料來源：<a href="https://mygo.0m0.uk/">https://mygo.0m0.uk/ </a> </p>
+  <div id="chatbox"></div>
+
+  <div id="question-area" style="display: none;">
+    <div id="question-text"></div>
+    <div id="options"></div>
+  </div>
+
+  <hr>
+
+  <br><br><br><br><br>
+  <div class="form-group">
+    <label>請選擇題目難度：</label>
+    <div class="radio-group" id="difficulty">
+      <label><input type="radio" name="difficulty" value="1" checked> 簡單（經典畫面）</label>
+      <label><input type="radio" name="difficulty" value="2"> 困難（所有畫面）</label>
+      <label><input type="radio" name="difficulty" value="3"> 超難（加遮罩/馬賽克）</label>
+  </div>
+  </div>
+
+  <div class="form-group">
+    <label>請選擇題目範圍：</label>
+    <div class="radio-group" id="range">
+      <label><input type="radio" name="range" value="1" checked> MyGO!!!!! + Ave Mujica</label>
+      <label><input type="radio" name="range" value="2"> MyGO!!!!!</label>
+      <label><input type="radio" name="range" value="3"> Ave Mujica</label>
+  </div>
+  </div>
+
+<div class="button-container">
+  <button id="start-btn">開始挑戰！</button>
+</div>
+
+  <script src="script.js"></script>
+</body>
+</html>

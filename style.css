@@ -1,0 +1,73 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  max-width: 700px;
+  margin: auto;
+  background-color: #55aadd;
+}
+#chatbox {
+  background: #f7f7f7;
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  min-height: 60px;
+
+  border: 1px solid #ccc;
+  padding: 10px;
+  overflow-y: auto;    /* 垂直方向可滾動 */
+
+  max-height: 600px;   /* 最大高度 */
+  height: auto;        /* 高度自動調整 */
+  box-sizing: border-box; /* 確保 padding 不會撐大盒子 */
+
+}
+
+#question-area {
+  margin-bottom: 12px;
+}
+#options button {
+  margin: 4px;
+  padding: 6px 12px;
+}
+
+
+.form-group {
+  margin: 20px 0;
+  font-size: 1.1em;
+}
+
+.radio-group {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.radio-group label {
+  padding: 10px;
+  background-color: #f0f4f8;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.radio-group input[type="radio"] {
+  margin-right: 10px;
+}
+
+.button-container {
+  text-align: center;
+  margin-top: 30px;
+}
+
+#start-btn {
+  font-size: 1.3em;
+  padding: 12px 24px;
+  background-color: #881144;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}

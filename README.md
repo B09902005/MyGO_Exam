@@ -1,0 +1,1 @@
+這個專案中，`data.json`是來自 Its-MyPicDB / Its-MyPic，連結為 https://github.com/Its-MyPic/Its-MyPicDB 。（他們的搜尋網頁： https://mygo.0m0.uk/ ）
