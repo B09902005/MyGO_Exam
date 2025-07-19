@@ -33,18 +33,21 @@ body {
   max-width: 800px;
   margin: auto;
   background-color: #55aadd;
-  margin: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: auto;
 }
 
 #chatbox {
   background: #f7f7f7;
   padding: 12px;
+  margin: 0 auto;
   margin-bottom: 12px;
   border-radius: 6px;
 
   border: 1px solid #ccc;
-  width: 80%;
-  max-width: 80%;
+  width: 95%;
+  max-width: 95%;
   padding: 10px;
   overflow-y: auto;    /* 垂直方向可滾動 */
 
@@ -153,7 +156,43 @@ body {
   }
 
   #options button {
-    font-size: 5em;
-    padding: 16px 24px; 
+    font-size: 1.2em;
+    padding: 12px 15px; 
   }
+}
+
+
+.left-msg {
+  text-align: left;
+  margin: 5px;
+  padding: 8px 12px;
+  background-color: #e1f3fb;
+  border-radius: 10px;
+  display: block;
+  width: fit-content;
+  max-width: 70%;
+  font-size: 16px; /* 預設字體大小 */
+  line-height: 1.2;
+  word-break: break-word;
+  word-wrap: break-word;
+  overflow-wrap: anywhere;  /* 避免過長單字爆版 */
+  white-space: normal;      /* 允許正常自動換行 */
+}
+
+.right-msg {
+  text-align: right;
+  margin: 5px;
+  padding: 8px 12px;
+  background-color: #d1f7c4;
+  border-radius: 10px;
+  display: block;
+  width: fit-content;
+  max-width: 70%;
+  font-size: 16px; /* 預設字體大小 */
+  line-height: 1.2;
+  word-break: break-word;
+  word-wrap: break-word;
+  margin-left: auto;
+  overflow-wrap: anywhere;  /* 避免過長單字爆版 */
+  white-space: normal;      /* 允許正常自動換行 */
 }

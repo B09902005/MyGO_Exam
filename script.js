@@ -10,6 +10,8 @@ async function loadData(path) {
 
 // 模擬 Python 的 start_quiz 功能
 async function startQuiz() {
+    console.log("Viewport width: " + window.innerWidth + "px");
+    console.log("Viewport height: " + window.innerHeight + "px");
     const chat = document.getElementById('chatbox');
     chat.innerHTML = "";
     addLeftText("正在生成題目，請稍等幾秒...")
@@ -101,33 +103,18 @@ function addLeftText(text) {
     const chat = document.getElementById('chatbox');
     const msg = document.createElement('div');
     msg.textContent = text;
-    msg.style.textAlign = 'left';
-    msg.style.margin = '5px';
-    msg.style.padding = '8px 12px';
-    msg.style.backgroundColor = '#e1f3fb';
-    msg.style.borderRadius = '10px';
-    msg.style.display = 'block';
-    msg.style.width = 'fit-content';
-    msg.style.maxWidth = '70%';
+    msg.className = 'left-msg';
     chat.appendChild(msg);
     chat.scrollTop = chat.scrollHeight; // 自動滾到最底
 }
 
 function addRightText(text) {
     const chat = document.getElementById('chatbox');
-    const msg = document.createElement('div');
+    const msg = document.createElement('p');
     msg.textContent = text;
-    msg.style.textAlign = 'right';
-    msg.style.margin = '5px';
-    msg.style.padding = '8px 12px';
-    msg.style.backgroundColor = '#d1f7c4';
-    msg.style.borderRadius = '10px';
-    msg.style.display = 'block';
-    msg.style.width = 'fit-content';
-    msg.style.maxWidth = '70%';
-    msg.style.marginLeft = 'auto'; // 靠右
+    msg.className = 'right-msg';
     chat.appendChild(msg);
-    chat.scrollTop = chatbox.scrollHeight; // 自動滾到最底
+    chat.scrollTop = chat.scrollHeight; // 自動滾到最底
 }
 
 function addImage(canvas) {
