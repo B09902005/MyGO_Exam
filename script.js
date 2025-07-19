@@ -107,8 +107,9 @@ function addLeftText(text) {
     msg.style.backgroundColor = '#e1f3fb';
     msg.style.borderRadius = '10px';
     msg.style.display = 'block';
-    msg.style.width = 'fit-content';
-    msg.style.maxWidth = '70%';
+    msg.style.maxWidth = '80%';
+    msg.style.wordWrap = 'break-word'; // 強制換行
+    msg.style.boxSizing = 'border-box'; // 確保 padding 不影響寬度計算
     chat.appendChild(msg);
     chat.scrollTop = chat.scrollHeight; // 自動滾到最底
 }
@@ -123,8 +124,9 @@ function addRightText(text) {
     msg.style.backgroundColor = '#d1f7c4';
     msg.style.borderRadius = '10px';
     msg.style.display = 'block';
-    msg.style.width = 'fit-content';
-    msg.style.maxWidth = '70%';
+    msg.style.maxWidth = '80%';
+    msg.style.wordWrap = 'break-word'; // 強制換行
+    msg.style.boxSizing = 'border-box'; // 確保 padding 不影響寬度計算
     msg.style.marginLeft = 'auto'; // 靠右
     chat.appendChild(msg);
     chat.scrollTop = chatbox.scrollHeight; // 自動滾到最底
